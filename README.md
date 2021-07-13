@@ -6,6 +6,7 @@ Group array of objects to create summarize on specific keys
 
 ## Usage
 
+**Example 1:**
 ```
 const { groupby } = require('egroupby');
 
@@ -34,13 +35,15 @@ will display:
   { shape: 'circle', color: 'red', cpus: 1 } ]
   ```
 
-and : 
+**Example 2:**
 ```
+...
 grouped = groupby(source, ['shape'], ['level']);
 
 console.log(grouped);
 ```
 will display:
+
 ```
 [ { shape: 'square', level: 13 },
   { shape: 'circle', level: 2 } ]
