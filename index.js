@@ -34,7 +34,7 @@ function initObject(o, keys_grouping, final_keys ) {
   return rv;
 }
 	
-function groupby(array, keys_grouping, keys_summing) {
+exports.groupby = function (array, keys_grouping, keys_summing) {
 
 	var final_keys = [...keys_grouping, ...keys_summing];
 	var hash = Object.create(null),
@@ -51,5 +51,3 @@ function groupby(array, keys_grouping, keys_summing) {
 
 	return grouped;
 }
-
-module.export = { groupby };
