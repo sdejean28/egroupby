@@ -52,4 +52,4 @@ function groupby(array, keys_grouping, keys_summing) {
 	return grouped;
 }
 
-module.export = groupby;
+module.export = { groupby };
