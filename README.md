@@ -2,7 +2,7 @@
 Group array of objects to create summarize on specific keys
 
 ## Install
-npm install --save sdejean28/egroupby
+``npm install --save sdejean28/egroupby
 
 ## Usage
 
