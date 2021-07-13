@@ -32,5 +32,7 @@ exports.groupby = function(array, keys_grouping, keys_summing) {
     }
     keys_summing.forEach(function (k) { hash[key][k] += o[k]; });
 });
+
+return grouped;
   
 }
