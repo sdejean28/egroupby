@@ -1,4 +1,24 @@
    
+/**
+ * Creates an object composed of keys generated from the results of running
+ * each element of `collection` with `keys_grouping` and summing with 'keys_summing'.
+ *
+ * @since 0.0.1
+ * @param {Array of Objects} The collection to group.
+ * @param {Array of String} The keys to group.
+ * @param {Array of String} The keys to calculate the sum.
+ * @returns {Array of Objects} Returns the group array limited to keys processed
+ * @example
+ *
+ * groupBy([{ color : 'blue', shape:'square', count : 1, level : 2}, 
+ *			{ color : 'blue', shape:'square', count : 2, level : 4},
+ *			{ color : 'blue', shape:'circle', count : 4, level : 12},
+ *			{ color : 'red', shape:'circle', count : 6, level : 0}], [ 'color', 'shape' ], [ 'count' ])
+ * => [ { color: 'blue', shape: 'square', count: 3 },
+ * 		{ color: 'blue', shape: 'circle', count: 4 },
+ * 		{ color: 'red', shape: 'circle', count: 6 } ]
+ */
+   
 function initObject(o, keys_grouping, final_keys ) {
   var rv = {};
 
@@ -14,14 +34,12 @@ function initObject(o, keys_grouping, final_keys ) {
   return rv;
 }
 	
-exports.groupby = function(array, keys_grouping, keys_summing) {
+function groupby(array, keys_grouping, keys_summing) {
   console.log("This is a message from the demo package");
 
 	var final_keys = [...keys_grouping, ...keys_summing];
 	var hash = Object.create(null),
 	grouped = [];
-
-	
 
 
   array.forEach(function (o) {
@@ -36,3 +54,5 @@ exports.groupby = function(array, keys_grouping, keys_summing) {
 return grouped;
   
 }
+
+export default groupBy
