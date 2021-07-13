@@ -7,7 +7,8 @@ Group array of objects to create summarize on specific keys
 ## Call function
 
 ```
-grouped = groupby(
+grouped = 			// returned array of objects
+	groupby(
 	**Array of Objects**, 	// array of objects to group, i.e : source 
 	**Array of Strings**, 	// array of strings representing keys to group
 	**Array of Strings**);	// array of strings representing keys to summarize (sum)
