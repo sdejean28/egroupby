@@ -1,4 +1,13 @@
    
+
+	
+exports.groupby = function(array, keys_grouping, keys_summing) {
+  console.log("This is a message from the demo package");
+
+	var final_keys = [...keys_grouping, ...keys_summing];
+	var hash = Object.create(null),
+	grouped = [];
+
 	
 function initObject(o) {
   var rv = {};
@@ -14,13 +23,6 @@ function initObject(o) {
   }
   return rv;
 }
-	
-exports.groupby = function(array, keys_grouping, keys_summing) {
-  console.log("This is a message from the demo package");
-
-	var final_keys = [...keys_grouping, ...keys_summing];
-	var hash = Object.create(null),
-	grouped = [];
 
   array.forEach(function (o) {
     var key = keys_grouping.map(function (k) { return o[k]; }).join('|');
