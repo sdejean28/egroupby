@@ -4,6 +4,15 @@ Group array of objects to create summarize on specific keys
 ## Install
 `npm install --save sdejean28/egroupby`
 
+## Call function
+
+```
+grouped = groupby(
+	**Array of Objects**, 	// array of objects to group, i.e : source 
+	**Array of Strings**, 	// array of strings representing keys to group
+	**Array of Strings**);	// array of strings representing keys to summarize (sum)
+```
+
 ## Usage
 
 **Example 1:**
