@@ -22,6 +22,7 @@ var source = [
 grouped = groupby(source, ['shape', 'color'], ['cpus']);
 
 console.log(grouped);
+
 ```
 
 will display:
@@ -32,3 +33,15 @@ will display:
   { shape: 'square', color: 'blue', cpus: 9 },
   { shape: 'circle', color: 'red', cpus: 1 } ]
   ```
+
+and : 
+```
+grouped = groupby(source, ['shape'], ['level']);
+
+console.log(grouped);
+```
+will display:
+```
+[ { shape: 'square', level: 13 },
+  { shape: 'circle', level: 2 } ]
+```
